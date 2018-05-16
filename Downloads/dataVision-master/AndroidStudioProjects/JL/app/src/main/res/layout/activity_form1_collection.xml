@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_height="match_parent">
+<android.widget.LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.data.Form1Collection">
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventID"
+        android:hint="Event ID"
+        android:inputType="number"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+       >
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventdate"
+            android:layout_marginTop="20dp"
+            android:hint="Pick Event Date"
+            android:enabled="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Date"
+            android:id="@+id/btn_date"
+            android:layout_marginTop="5dp"
+            android:background="@color/prodrawerbackground"
+            android:textColor="@color/problack"
+            android:layout_alignBottom="@+id/eventdate"
+            android:layout_toRightOf="@+id/eventdate"
+            android:layout_toEndOf="@+id/eventdate" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_time"
+            android:hint="Pick Start Time"
+            android:enabled="false"
+            android:layout_below="@+id/eventdate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START TIME"
+            android:id="@+id/btn_time"
+            android:layout_marginTop="5dp"
+            android:background="@color/prodrawerbackground"
+            android:textColor="@color/problack"
+            android:layout_below="@+id/btn_date"
+            android:layout_alignLeft="@+id/btn_date"
+            android:layout_alignStart="@+id/btn_date" />
+
+
+        <EditText
+            android:id="@+id/stoptime"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/start_time"
+            android:enabled="false"
+            android:hint="Pick Stop Time" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="STOP TIME"
+            android:background="@color/prodrawerbackground"
+            android:textColor="@color/problack"
+            android:id="@+id/btn_stoptime"
+            android:layout_below="@+id/btn_time"
+            android:layout_alignLeft="@+id/btn_time"
+            android:layout_alignStart="@+id/btn_time" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/problack"
+        android:textStyle="bold"
+        android:text="Select Your County"/>
+
+
+    <Spinner
+        android:id="@+id/county"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/problack"
+        android:text="Your Sub County"/>
+
+    <Spinner
+        android:id="@+id/subcounty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+         />
+
+    <EditText
+        android:id="@+id/village"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+        android:hint="Your Village" />
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textStyle="bold"
+         android:textColor="@color/problack"
+         android:text="Select Technical Area"/>
+
+
+    <Spinner
+        android:id="@+id/area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+         />
+
+
+    <EditText
+        android:id="@+id/activitytype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+        android:hint="Type of Activity" />
+
+    <EditText
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+        android:hint="Your Output" />
+
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+        android:hint="Estimated Cost" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/problack"
+        android:text="Select Facility Type"/>
+
+    <Spinner
+        android:id="@+id/facilitytype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+        />
+
+    <EditText
+        android:id="@+id/facilityname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+        android:hint="Facilty Name" />
+
+    <EditText
+        android:id="@+id/officername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:textSize="15sp"
+        android:enabled="true"
+        android:hint="Officer Name" />
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/img"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+           />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse"
+            android:id="@+id/btn_img1"
+            android:layout_marginTop="5dp"
+            android:background="@color/prodrawerbackground"
+            android:textColor="@color/problack"
+            android:layout_alignBottom="@+id/img"
+            android:layout_toRightOf="@+id/img"
+            android:layout_toEndOf="@+id/img" />
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/img1"
+            android:layout_below="@+id/img"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse"
+            android:id="@+id/btn_img2"
+            android:layout_marginTop="5dp"
+            android:background="@color/prodrawerbackground"
+            android:textColor="@color/problack"
+            android:layout_below="@+id/btn_img1"
+            android:layout_toRightOf="@id/img1"
+
+           />
+
+    </RelativeLayout>
+   <View
+       android:layout_width="wrap_content"
+       android:layout_height="5dp"/>
+    <Button
+        android:id="@+id/savesurveylocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/problack"
+        android:background="@color/prodrawerbackground"
+        android:text="Save/Proceed" />
+
+
+</android.widget.LinearLayout>
+</ScrollView>
