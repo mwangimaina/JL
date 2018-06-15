@@ -1,0 +1,81 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007fabef406855, pid=3294, tid=0x00007fabbdb2a700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b01) (build 1.8.0_152-release-1024-b01)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x9f855]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fab84028000):  JavaThread "Task worker for ':'" [_thread_in_native, id=6038, stack(0x00007fabbda2a000,0x00007fabbdb2b000)]
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007fab902c9176
+
+Registers:
+RAX=0xffff805552f16c6a, RBX=0x00007fab902c50f0, RCX=0x0000000000000c1c, RDX=0x000000000000060e
+RSP=0x00007fabbdb27158, RBP=0x00007fabbdb27180, RSI=0x00000000e31dfdf0, RDI=0x00007fab902c8b78
+R8 =0x000000000000060e, R9 =0x0000000000000003, R10=0x0000000000000000, R11=0x00007fab9001a5d0
+R12=0x000000000000060e, R13=0x000000000000060e, R14=0x00000000e31e03fe, R15=0x00007fab902c50f0
+RIP=0x00007fabef406855, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000006
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fabbdb27158)
+0x00007fabbdb27158:   00007fabecc9a0d7 0000000000000000
+0x00007fabbdb27168:   00000000e31dfd98 0000000000000000
+0x00007fabbdb27178:   000000000000003f 00007fabbdb27230
+0x00007fabbdb27188:   00007fabecc9abd5 00000001000902d0
+0x00007fabbdb27198:   00007fab84028000 00007fab902c50f0
+0x00007fabbdb271a8:   00007fab902c5640 00007fab902c5400
+0x00007fabbdb271b8:   00007fabbdb271f0 00000200fffffffc
+0x00007fabbdb271c8:   00007fab9001a5d0 00000000e31e03fe
+0x00007fabbdb271d8:   0000000100000000 00007fab9001a5d0
+0x00007fabbdb271e8:   00007fab00002000 00007fab84028000
+0x00007fabbdb271f8:   26cbdf2f8ef4c900 00000000e31df878
+0x00007fabbdb27208:   00007fab9001a5d0 00007fabbdb272a0
+0x00007fabbdb27218:   00007fab64000f30 00007fab840281e0
+0x00007fabbdb27228:   00000000e31dfb98 00007fabbdb27290
+0x00007fabbdb27238:   00007fabecc92828 00000000e31dfdf0
+0x00007fabbdb27248:   0000000000000000 0000020000002000
+0x00007fabbdb27258:   00007fabbdb272b0 00007fab840281e0
+0x00007fabbdb27268:   00000000e31df948 0000000000000000
+0x00007fabbdb27278:   00000000e31df860 0000000100040650
+0x00007fabbdb27288:   00007fab84028000 00007fabbdb272e0
+0x00007fabbdb27298:   00007fabd9176886 00000000e31df8f0
+0x00007fabbdb272a8:   00000000e31dfb88 00000000e31dfde0
+0x00007fabbdb272b8:   0000000000000200 00000000e31df860
+0x00007fabbdb272c8:   00007fabbdb272f0 0000000000000001
+0x00007fabbdb272d8:   00000001000403c8 0000000000000200
+0x00007fabbdb272e8:   00007fabda682b70 00000000e31df838
+0x00007fabbdb272f8:   e31df8f000002000 e31df94800000000
+0x00007fabbdb27308:   0000000000000007 0000000100040650
+0x00007fabbdb27318:   00007fabda729e89 00000000e31df948
+0x00007fabbdb27328:   00000000e31df8f0 00000000e31df838
+0x00007fabbdb27338:   00000000e31dfde0 e31e263800000009
+0x00007fabbdb27348:   00007fab0000000b 0000000000000000 
+
+Instructions: (pc=0x00007fabef406855)
+0x00007fabef406835:   00 48 83 fa 10 0f 86 8b 01 00 00 f3 44 0f 6f 06
+0x00007fabef406845:   48 83 fa 20 f3 44 0f 7f 07 f3 44 0f 6f 44 16 f0
+0x00007fabef406855:   f3 44 0f 7f 44 17 f0 77 12 48 89 f8 c3 0f 1f 40
+0x00007fabef406865:   00 66 2e 0f 1f 84 00 00 00 00 00 f3 44 0f 6f 46 
+
+Register to memory mapping:
+
+RAX=0xffff805552f16c6a is an unknown value
+RBX=0x00007fab902c50f0 is an unknown value
+RCX=0x0000000000000c1c is an unknown value
+RDX=0x000000000000060e is an unknown value
+RSP=0x00007fabbdb27158 is pointing into the stack for thread: 0x00007fab84028000
+RBP=0x00007fabbdb27180 is pointing into the stack for thread: 0x00007fab84028000
+RSI=0x00000000e31dfdf0 is an oop
